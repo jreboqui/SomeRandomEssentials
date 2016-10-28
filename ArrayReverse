@@ -1,0 +1,25 @@
+//Main part is in line 15 where I'm traversing the array in reverse
+//we set our index to n-1, then do the for loop until you reach index >=0
+//reason why it's n-1 is because we start at 0 and the last element is n-1
+//i.e. if you have 10 elements, your last index is 10-1 which is 9.
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int arr[] = new int[n];
+        for(int arr_i=0; arr_i < n; arr_i++){
+            arr[arr_i] = in.nextInt();
+        }
+        for(int arr_i=n-1;arr_i >= 0; arr_i--){
+            System.out.print(arr[arr_i] + " ");
+        }
+    }
+}
