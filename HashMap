@@ -1,0 +1,38 @@
+//Using dictionary or map structures
+
+creating a new HashMap:
+Example:
+Map<String,String> name_of_map = new HashMap<String,String>();
+
+//Here's the hackerrank challenge for that
+//Complete this code or write your own from scratch
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        //Declare or create a HashMap
+        Map<String,Integer> phoneBook = new HashMap<String,Integer>(); //creates a map<string,string> and makes it a hashmap
+        
+        for(int i = 0; i < n; i++){
+            String name = in.next();
+            int phone = in.nextInt();
+            // Write code here
+            //name is the first argument here, the second argument which is value would be phone.!
+            phoneBook.put(name, phone);
+            
+        }
+        //Searching for it???
+        while(in.hasNext()){
+            String s = in.next();
+            // Write code here
+            if (phoneBook.containsKey(s))
+                System.out.println(s + "=" + phoneBook.get(s));
+            else
+                System.out.println("Not found");
+        }
+        in.close();
+    }
+}
